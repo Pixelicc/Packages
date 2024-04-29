@@ -31,50 +31,40 @@ const log = (service: string, msg: string, level: LogLevel): void => {
   }
 };
 
-/**
- * Logs a message to the console using the runtime's default console implementation with the **CRITICAL** Level
- *
- * @param service Service that emitted the log call
- * @param msg Message to log
- */
-const critical = (service: string, msg: string): void => log(service, msg, "CRITICAL");
-
-/**
- * Logs a message to the console using the runtime's default console implementation with the **ERROR** Level
- *
- * @param service Service that emitted the log call
- * @param msg Message to log
- */
-const error = (service: string, msg: string): void => log(service, msg, "ERROR");
-
-/**
- * Logs a message to the console using the runtime's default console implementation with the **WARNING** Level
- *
- * @param service Service that emitted the log call
- * @param msg Message to log
- */
-const warning = (service: string, msg: string): void => log(service, msg, "WARNING");
-
-/**
- * Logs a message to the console using the runtime's default console implementation with the **INFO** Level
- *
- * @param service Service that emitted the log call
- * @param msg Message to log
- */
-const info = (service: string, msg: string): void => log(service, msg, "INFO");
-
-/**
- * Logs a message to the console using the runtime's default console implementation with the **DEBUG** Level
- *
- * @param service Service that emitted the log call
- * @param msg Message to log
- */
-const debug = (service: string, msg: string): void => log(service, msg, "DEBUG");
-
 export default {
-  critical,
-  error,
-  warning,
-  info,
-  debug,
+  /**
+   * Logs a message to the console using the runtime's default console implementation with the **CRITICAL** Level
+   *
+   * @param service Service that emitted the log call
+   * @param msg Message to log
+   */
+  critical: (service: string, msg: string): void => log(service, msg, "CRITICAL"),
+  /**
+   * Logs a message to the console using the runtime's default console implementation with the **ERROR** Level
+   *
+   * @param service Service that emitted the log call
+   * @param msg Message to log
+   */
+  error: (service: string, msg: string): void => log(service, msg, "ERROR"),
+  /**
+   * Logs a message to the console using the runtime's default console implementation with the **WARNING** Level
+   *
+   * @param service Service that emitted the log call
+   * @param msg Message to log
+   */
+  warning: (service: string, msg: string): void => log(service, msg, "WARNING"),
+  /**
+   * Logs a message to the console using the runtime's default console implementation with the **INFO** Level
+   *
+   * @param service Service that emitted the log call
+   * @param msg Message to log
+   */
+  info: (service: string, msg: string): void => log(service, msg, "INFO"),
+  /**
+   * Logs a message to the console using the runtime's default console implementation with the **DEBUG** Level
+   *
+   * @param service Service that emitted the log call
+   * @param msg Message to log
+   */
+  debug: (service: string, msg: string): void => log(service, msg, "DEBUG"),
 };
