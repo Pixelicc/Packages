@@ -2,12 +2,12 @@ name: Publish to JSR
 
 defaults:
   run:
-    working-directory: ./logger
+    working-directory: ./packages/logger
 
 on:
   push:
     paths:
-      - "logger/**"
+      - "packages/logger/**"
     branches:
       - main
 
