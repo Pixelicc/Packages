@@ -18,7 +18,7 @@ type LogLevel = "CRITICAL" | "ERROR" | "WARNING" | "INFO" | "DEBUG";
  * @param msg Message to log
  * @param level Log Level
  */
-const log = (service: string, msg: string, level: LogLevel) => {
+const log = (service: string, msg: string, level: LogLevel): void => {
   const chalkedDate = `${chalk.white(`${String(new Date().getHours()).padStart(2, "0")}:${String(new Date().getMinutes()).padStart(2, "0")}:${String(new Date().getSeconds()).padStart(2, "0")}`)}`;
   if (level == "CRITICAL" || level == "ERROR") {
     console.error(`[${chalkedDate}] [${chalk.green(service)}] » ${chalk.red(msg)}`);
@@ -37,7 +37,7 @@ const log = (service: string, msg: string, level: LogLevel) => {
  * @param service Service that emitted the log call
  * @param msg Message to log
  */
-const critical = (service: string, msg: string) => log(service, msg, "CRITICAL");
+const critical = (service: string, msg: string): void => log(service, msg, "CRITICAL");
 
 /**
  * Logs a message to the console using the runtime's default console implementation with the **ERROR** Level
@@ -45,7 +45,7 @@ const critical = (service: string, msg: string) => log(service, msg, "CRITICAL")
  * @param service Service that emitted the log call
  * @param msg Message to log
  */
-const error = (service: string, msg: string) => log(service, msg, "ERROR");
+const error = (service: string, msg: string): void => log(service, msg, "ERROR");
 
 /**
  * Logs a message to the console using the runtime's default console implementation with the **WARNING** Level
@@ -53,7 +53,7 @@ const error = (service: string, msg: string) => log(service, msg, "ERROR");
  * @param service Service that emitted the log call
  * @param msg Message to log
  */
-const warning = (service: string, msg: string) => log(service, msg, "WARNING");
+const warning = (service: string, msg: string): void => log(service, msg, "WARNING");
 
 /**
  * Logs a message to the console using the runtime's default console implementation with the **INFO** Level
@@ -61,7 +61,7 @@ const warning = (service: string, msg: string) => log(service, msg, "WARNING");
  * @param service Service that emitted the log call
  * @param msg Message to log
  */
-const info = (service: string, msg: string) => log(service, msg, "INFO");
+const info = (service: string, msg: string): void => log(service, msg, "INFO");
 
 /**
  * Logs a message to the console using the runtime's default console implementation with the **DEBUG** Level
@@ -69,7 +69,7 @@ const info = (service: string, msg: string) => log(service, msg, "INFO");
  * @param service Service that emitted the log call
  * @param msg Message to log
  */
-const debug = (service: string, msg: string) => log(service, msg, "DEBUG");
+const debug = (service: string, msg: string): void => log(service, msg, "DEBUG");
 
 export default {
   critical,
