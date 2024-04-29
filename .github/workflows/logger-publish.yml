@@ -1,4 +1,4 @@
-name: Publish to JSR
+name: "[Logger] Publish to JSR"
 
 defaults:
   run:
