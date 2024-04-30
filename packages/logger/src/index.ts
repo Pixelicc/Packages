@@ -48,7 +48,7 @@ export type LoggerConfig = {
  *
  * @returns Logger Instance
  */
-export const createLogger = (config?: LoggerConfig) => new Logger(config);
+export const createLogger = (config?: LoggerConfig): Logger => new Logger(config);
 
 /**
  * Logger Instance
