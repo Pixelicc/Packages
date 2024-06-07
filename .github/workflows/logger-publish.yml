@@ -10,6 +10,7 @@ on:
       - "packages/logger/**"
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   publish:
