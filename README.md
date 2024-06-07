@@ -11,6 +11,7 @@ npx jsr add @pixelic/{PACKAGE_NAME}
 
 # List of Packages
 
-| Name                                                |                              Version                              | Downloads | Maintained |
-| --------------------------------------------------- | :---------------------------------------------------------------: | --------: | ---------- |
-| [`@pixelic/logger`](https://jsr.io/@pixelic/logger) | ![Version](https://img.shields.io/jsr/v/%40pixelic/logger?label=) |     `NaN` | ✅         |
+| Name                                                                      |                                   Version                                    | Downloads | Maintained |
+| ------------------------------------------------------------------------- | :--------------------------------------------------------------------------: | --------: | ---------- |
+| [`@pixelic/logger`](https://jsr.io/@pixelic/logger)                       |      ![Version](https://img.shields.io/jsr/v/%40pixelic/logger?label=)       |     `NaN` | ✅         |
+| [`@pixelic/elysia-request-id`](https://jsr.io/@pixelic/elysia-request-id) | ![Version](https://img.shields.io/jsr/v/%40pixelic/elysia-request-id?label=) |     `NaN` | ✅         |

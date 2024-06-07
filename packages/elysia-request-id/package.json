@@ -1,0 +1,10 @@
+{
+  "type": "module",
+  "dependencies": {
+    "ulidx": "^2.3.0"
+  },
+  "devDependencies": {
+    "elysia": "^1.0.22",
+    "typescript": "^5.4.5"
+  }
+}

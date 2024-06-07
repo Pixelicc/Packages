@@ -6,3 +6,9 @@ updates:
       interval: "weekly"
     commit-message:
       prefix: "Logger"
+  - package-ecosystem: "npm"
+    directory: "/elysia-request-id"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "Elysia-Request-ID"
