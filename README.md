@@ -5,9 +5,9 @@
 
 All Packages that in this repository are published to the [`JSR`](https://jsr.io) registry and can be added to a project like this:
 
-```console
-npx jsr add @pixelic/{PACKAGE_NAME}
-```
+[`npm`](https://npmjs.com/) » `npx jsr add @pixelic/{PACKAGE_NAME}`<br/>
+[`pnpm`](https://pnpm.io/) » `pnpm dlx jsr add @pixelic/{PACKAGE_NAME}`<br/>
+[`bun`](https://bun.sh/) » `bunx jsr add @pixelic/{PACKAGE_NAME}`
 
 # List of Packages
 
