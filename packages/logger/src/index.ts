@@ -42,20 +42,15 @@ export type LoggerConfig = {
 };
 
 /**
- * Creates a new Logger Instance
+ * Creates a Logger Instance
  *
- * @param config
+ * @class
+ *
+ * @constructor config
  *
  * @returns Logger Instance
  */
-export const createLogger = (config?: LoggerConfig): Logger => new Logger(config);
-
-/**
- * Logger Instance
- *
- * @class
- */
-class Logger {
+export class Logger {
   private minLevel: LogLevel = "INFO";
 
   /**
@@ -81,7 +76,7 @@ class Logger {
    * @param msg Message to log
    * @param level Log Level
    */
-  private log(service: string, msg: string, level: LogLevel): void {
+  public log(service: string, msg: string, level: LogLevel): void {
     if (!this.satisfiesMinLevel(level)) return;
 
     const chalkedDate = chalk.white(`${String(new Date().getHours()).padStart(2, "0")}:${String(new Date().getMinutes()).padStart(2, "0")}:${String(new Date().getSeconds()).padStart(2, "0")}`);
