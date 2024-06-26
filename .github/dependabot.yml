@@ -1,13 +1,13 @@
 version: 2
 updates:
   - package-ecosystem: "npm"
-    directory: "/logger"
+    directory: "/packages/logger"
     schedule:
       interval: "weekly"
     commit-message:
       prefix: "Logger"
   - package-ecosystem: "npm"
-    directory: "/elysia-request-id"
+    directory: "/packages/elysia-request-id"
     schedule:
       interval: "weekly"
     commit-message:
