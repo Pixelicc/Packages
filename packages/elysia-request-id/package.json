@@ -4,7 +4,7 @@
     "ulidx": "^2.3.0"
   },
   "devDependencies": {
-    "elysia": "^1.0.22",
+    "elysia": "^1.0.25",
     "typescript": "^5.4.5"
   }
 }
