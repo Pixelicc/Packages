@@ -1,35 +1,35 @@
-lockfileVersion: '6.0'
+lockfileVersion: '9.0'
 
 settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-dependencies:
-  ulidx:
-    specifier: ^2.3.0
-    version: 2.3.0
+importers:
 
-devDependencies:
-  elysia:
-    specifier: ^1.0.22
-    version: 1.0.25(@sinclair/typebox@0.32.34)(typescript@5.5.2)
-  typescript:
-    specifier: ^5.5.2
-    version: 5.5.2
+  .:
+    dependencies:
+      ulidx:
+        specifier: ^2.3.0
+        version: 2.3.0
+    devDependencies:
+      elysia:
+        specifier: ^1.0.26
+        version: 1.0.26(@sinclair/typebox@0.32.34)(typescript@5.5.2)
+      typescript:
+        specifier: ^5.5.2
+        version: 5.5.2
 
 packages:
 
-  /@sinclair/typebox@0.32.34:
+  '@sinclair/typebox@0.32.34':
     resolution: {integrity: sha512-a3Z3ytYl6R/+7ldxx04PO1semkwWlX/8pTqxsPw4quIcIXDFPZhOc1Wx8azWmkU26ccK3mHwcWenn0avNgAKQg==}
-    dev: true
 
-  /cookie@0.6.0:
+  cookie@0.6.0:
     resolution: {integrity: sha512-U71cyTamuh1CRNCfpGY6to28lxvNwPG4Guz/EVjgf3Jmzv0vlDp1atT9eS5dDjMYHucpHbWns6Lwf3BKz6svdw==}
     engines: {node: '>= 0.6'}
-    dev: true
 
-  /elysia@1.0.25(@sinclair/typebox@0.32.34)(typescript@5.5.2):
-    resolution: {integrity: sha512-Tf29quL0G9xIZI246cn60K3XnCeAjwzrd1fpQ8IlLlM19CaUse0oq0A4bq23Uz2z1CsH/6vKECxvdLh3AS8KVA==}
+  elysia@1.0.26:
+    resolution: {integrity: sha512-6z1XMnxpB7aAiYWYJGmCsuRKvXYD43N8gdVQOoqDamd7wkHI7NmsX1zXdl/OZEjMy9li4CK852tenOCc0/DZVQ==}
     peerDependencies:
       '@sinclair/typebox': '>= 0.31.0'
       openapi-types: '>= 12.0.0'
@@ -39,42 +39,56 @@ packages:
         optional: true
       typescript:
         optional: true
+
+  eventemitter3@5.0.1:
+    resolution: {integrity: sha512-GWkBvjiSZK87ELrYOSESUYeVIc9mvLLf/nXalMOS5dYrgZq9o5OVkbZAVM06CVxYsCwH9BDZFPlQTlPA1j4ahA==}
+
+  fast-decode-uri-component@1.0.1:
+    resolution: {integrity: sha512-WKgKWg5eUxvRZGwW8FvfbaH7AXSh2cL+3j5fMGzUMCxWBJ3dV3a7Wz8y2f/uQ0e3B6WmodD3oS54jTQ9HVTIIg==}
+
+  fast-querystring@1.1.2:
+    resolution: {integrity: sha512-g6KuKWmFXc0fID8WWH0jit4g0AGBoJhCkJMb1RmbsSEUNvQ+ZC8D6CUZ+GtF8nMzSPXnhiePyyqqipzNNEnHjg==}
+
+  layerr@2.1.0:
+    resolution: {integrity: sha512-xDD9suWxfBYeXgqffRVH/Wqh+mqZrQcqPRn0I0ijl7iJQ7vu8gMGPt1Qop59pEW/jaIDNUN7+PX1Qk40+vuflg==}
+
+  typescript@5.5.2:
+    resolution: {integrity: sha512-NcRtPEOsPFFWjobJEtfihkLCZCXZt/os3zf8nTxjVH3RvTSxjrCamJpbExGvYOF+tFHc3pA65qpdwPbzjohhew==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
+  ulidx@2.3.0:
+    resolution: {integrity: sha512-36piWNqcdp9hKlQewyeehCaALy4lyx3FodsCxHuV6i0YdexSkjDOubwxEVr2yi4kh62L/0MgyrxqG4K+qtovnw==}
+    engines: {node: '>=16'}
+
+snapshots:
+
+  '@sinclair/typebox@0.32.34': {}
+
+  cookie@0.6.0: {}
+
+  elysia@1.0.26(@sinclair/typebox@0.32.34)(typescript@5.5.2):
     dependencies:
       '@sinclair/typebox': 0.32.34
       cookie: 0.6.0
       eventemitter3: 5.0.1
       fast-decode-uri-component: 1.0.1
       fast-querystring: 1.1.2
+    optionalDependencies:
       typescript: 5.5.2
-    dev: true
 
-  /eventemitter3@5.0.1:
-    resolution: {integrity: sha512-GWkBvjiSZK87ELrYOSESUYeVIc9mvLLf/nXalMOS5dYrgZq9o5OVkbZAVM06CVxYsCwH9BDZFPlQTlPA1j4ahA==}
-    dev: true
+  eventemitter3@5.0.1: {}
 
-  /fast-decode-uri-component@1.0.1:
-    resolution: {integrity: sha512-WKgKWg5eUxvRZGwW8FvfbaH7AXSh2cL+3j5fMGzUMCxWBJ3dV3a7Wz8y2f/uQ0e3B6WmodD3oS54jTQ9HVTIIg==}
-    dev: true
+  fast-decode-uri-component@1.0.1: {}
 
-  /fast-querystring@1.1.2:
-    resolution: {integrity: sha512-g6KuKWmFXc0fID8WWH0jit4g0AGBoJhCkJMb1RmbsSEUNvQ+ZC8D6CUZ+GtF8nMzSPXnhiePyyqqipzNNEnHjg==}
+  fast-querystring@1.1.2:
     dependencies:
       fast-decode-uri-component: 1.0.1
-    dev: true
 
-  /layerr@2.1.0:
-    resolution: {integrity: sha512-xDD9suWxfBYeXgqffRVH/Wqh+mqZrQcqPRn0I0ijl7iJQ7vu8gMGPt1Qop59pEW/jaIDNUN7+PX1Qk40+vuflg==}
-    dev: false
+  layerr@2.1.0: {}
 
-  /typescript@5.5.2:
-    resolution: {integrity: sha512-NcRtPEOsPFFWjobJEtfihkLCZCXZt/os3zf8nTxjVH3RvTSxjrCamJpbExGvYOF+tFHc3pA65qpdwPbzjohhew==}
-    engines: {node: '>=14.17'}
-    hasBin: true
-    dev: true
+  typescript@5.5.2: {}
 
-  /ulidx@2.3.0:
-    resolution: {integrity: sha512-36piWNqcdp9hKlQewyeehCaALy4lyx3FodsCxHuV6i0YdexSkjDOubwxEVr2yi4kh62L/0MgyrxqG4K+qtovnw==}
-    engines: {node: '>=16'}
+  ulidx@2.3.0:
     dependencies:
       layerr: 2.1.0
-    dev: false
