@@ -13,8 +13,8 @@ importers:
         version: 2.3.0
     devDependencies:
       elysia:
-        specifier: ^1.0.26
-        version: 1.0.26(@sinclair/typebox@0.32.34)(typescript@5.5.3)
+        specifier: ^1.0.27
+        version: 1.0.27(@sinclair/typebox@0.32.34)(typescript@5.5.3)
       typescript:
         specifier: ^5.5.3
         version: 5.5.3
@@ -28,8 +28,8 @@ packages:
     resolution: {integrity: sha512-U71cyTamuh1CRNCfpGY6to28lxvNwPG4Guz/EVjgf3Jmzv0vlDp1atT9eS5dDjMYHucpHbWns6Lwf3BKz6svdw==}
     engines: {node: '>= 0.6'}
 
-  elysia@1.0.26:
-    resolution: {integrity: sha512-6z1XMnxpB7aAiYWYJGmCsuRKvXYD43N8gdVQOoqDamd7wkHI7NmsX1zXdl/OZEjMy9li4CK852tenOCc0/DZVQ==}
+  elysia@1.0.27:
+    resolution: {integrity: sha512-mf76BUZeLyw459KbKL+LLy+KtwOV152EfeZWp3p1fivbqEGu20IKbqkDmpiwzJxIz26ifp6Y3gQ0d4UizFvHrw==}
     peerDependencies:
       '@sinclair/typebox': '>= 0.31.0'
       openapi-types: '>= 12.0.0'
@@ -67,7 +67,7 @@ snapshots:
 
   cookie@0.6.0: {}
 
-  elysia@1.0.26(@sinclair/typebox@0.32.34)(typescript@5.5.3):
+  elysia@1.0.27(@sinclair/typebox@0.32.34)(typescript@5.5.3):
     dependencies:
       '@sinclair/typebox': 0.32.34
       cookie: 0.6.0
