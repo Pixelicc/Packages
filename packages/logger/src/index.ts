@@ -70,7 +70,7 @@ export class Logger {
   }
 
   /**
-   * @private Logs a message to the console using the runtime's default console implementation
+   * @public Logs a message to the console using the runtime's default console implementation
    *
    * @param service Service that emitted the log call
    * @param msg Message to log
