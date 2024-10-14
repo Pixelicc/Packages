@@ -14,10 +14,10 @@ importers:
     devDependencies:
       elysia:
         specifier: ^1.0.27
-        version: 1.0.27(@sinclair/typebox@0.32.34)(typescript@5.5.3)
+        version: 1.0.27(@sinclair/typebox@0.32.34)(typescript@5.6.3)
       typescript:
-        specifier: ^5.5.3
-        version: 5.5.3
+        specifier: ^5.6.3
+        version: 5.6.3
 
 packages:
 
@@ -52,8 +52,8 @@ packages:
   layerr@2.1.0:
     resolution: {integrity: sha512-xDD9suWxfBYeXgqffRVH/Wqh+mqZrQcqPRn0I0ijl7iJQ7vu8gMGPt1Qop59pEW/jaIDNUN7+PX1Qk40+vuflg==}
 
-  typescript@5.5.3:
-    resolution: {integrity: sha512-/hreyEujaB0w76zKo6717l3L0o/qEUtRgdvUBvlkhoWeOVMjMuHNHk0BRBzikzuGDqNmPQbg5ifMEqsHLiIUcQ==}
+  typescript@5.6.3:
+    resolution: {integrity: sha512-hjcS1mhfuyi4WW8IWtjP7brDrG2cuDZukyrYrSauoXGNgx0S7zceP07adYkJycEr56BOUTNPzbInooiN3fn1qw==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -67,7 +67,7 @@ snapshots:
 
   cookie@0.6.0: {}
 
-  elysia@1.0.27(@sinclair/typebox@0.32.34)(typescript@5.5.3):
+  elysia@1.0.27(@sinclair/typebox@0.32.34)(typescript@5.6.3):
     dependencies:
       '@sinclair/typebox': 0.32.34
       cookie: 0.6.0
@@ -75,7 +75,7 @@ snapshots:
       fast-decode-uri-component: 1.0.1
       fast-querystring: 1.1.2
     optionalDependencies:
-      typescript: 5.5.3
+      typescript: 5.6.3
 
   eventemitter3@5.0.1: {}
 
@@ -87,7 +87,7 @@ snapshots:
 
   layerr@2.1.0: {}
 
-  typescript@5.5.3: {}
+  typescript@5.6.3: {}
 
   ulidx@2.3.0:
     dependencies:
