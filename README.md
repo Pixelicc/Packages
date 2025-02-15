@@ -14,4 +14,4 @@ All Packages that in this repository are published to the [`JSR`](https://jsr.io
 | Name                                                                      |                                   Version                                    | Downloads | Maintained |
 | ------------------------------------------------------------------------- | :--------------------------------------------------------------------------: | --------: | ---------- |
 | [`@pixelic/logger`](https://jsr.io/@pixelic/logger)                       |      ![Version](https://img.shields.io/jsr/v/%40pixelic/logger?label=)       |     `NaN` | ✅         |
-| [`@pixelic/elysia-request-id`](https://jsr.io/@pixelic/elysia-request-id) | ![Version](https://img.shields.io/jsr/v/%40pixelic/elysia-request-id?label=) |     `NaN` | ✅         |
+| [`@pixelic/elysia-request-id`](https://jsr.io/@pixelic/elysia-request-id) | ![Version](https://img.shields.io/jsr/v/%40pixelic/elysia-request-id?label=) |     `NaN` | ❌         |
