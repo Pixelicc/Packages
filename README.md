@@ -11,6 +11,6 @@ All Packages that in this repository are published to the [`JSR`](https://jsr.io
 
 # List of Packages
 
-| Name                                                                      |                                   Version                                    | Downloads | Maintained |
-| ------------------------------------------------------------------------- | :--------------------------------------------------------------------------: | --------: | ---------- |
-| [`@pixelic/logger`](https://jsr.io/@pixelic/logger)                       |      ![Version](https://img.shields.io/jsr/v/%40pixelic/logger?label=)       |     `NaN` | ✅         |
+| Name                                                                      |                                   Version                                    |                                 Downloads                                          | Maintained |
+| ------------------------------------------------------------------------- | :--------------------------------------------------------------------------: | ---------------------------------------------------------------------------------: | ---------- |
+| [`@pixelic/logger`](https://jsr.io/@pixelic/logger)                       |      ![Version](https://jsr.io/badges/@pixelic/logger)                       |     ![Downloads](https://jsr.io/badges/@pixelic/logger/total-downloads)            | ✅         |
