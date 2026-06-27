@@ -76,29 +76,29 @@ export class Logger {
    * @param msg Message to log
    * @param level Log Level
    */
-  public log(service: string, msg: string, level: LogLevel): void {
+  public log(service: string, msg: string, level: LogLevel, id?: string): void {
     if (!this.satisfiesMinLevel(level)) return;
 
     const chalkedDate = chalk.white(`${String(new Date().getHours()).padStart(2, "0")}:${String(new Date().getMinutes()).padStart(2, "0")}:${String(new Date().getSeconds()).padStart(2, "0")}`);
 
     switch (level) {
       case "CRITICAL":
-        console.error(`[${chalkedDate}] [${chalk.greenBright(service)}] [${chalk.bgRed(level)}] » ${chalk.bgRed(msg)}`);
+        console.error(`[${chalkedDate}] [${chalk.greenBright(service)}] [${chalk.bgRed(level)}] » ${id ? "(" + id + ") " : ""}${chalk.bgRed(msg)}`);
         break;
       case "ERROR":
-        console.error(`[${chalkedDate}] [${chalk.greenBright(service)}] [${chalk.red(level)}] » ${chalk.red(msg)}`);
+        console.error(`[${chalkedDate}] [${chalk.greenBright(service)}] [${chalk.red(level)}] » ${id ? "(" + id + ") " : ""}${chalk.red(msg)}`);
         break;
       case "WARNING":
-        console.warn(`[${chalkedDate}] [${chalk.greenBright(service)}] [${chalk.yellow(level)}] » ${chalk.yellow(msg)}`);
+        console.warn(`[${chalkedDate}] [${chalk.greenBright(service)}] [${chalk.yellow(level)}] » ${id ? "(" + id + ") " : ""}${chalk.yellow(msg)}`);
         break;
       case "INFO":
-        console.log(`[${chalkedDate}] [${chalk.greenBright(service)}] [${chalk.blue(level)}] » ${chalk.blue(msg)}`);
+        console.log(`[${chalkedDate}] [${chalk.greenBright(service)}] [${chalk.blue(level)}] » ${id ? "(" + id + ") " : ""}${chalk.blue(msg)}`);
         break;
       case "DEBUG":
-        console.log(`[${chalkedDate}] [${chalk.greenBright(service)}] [${chalk.cyan(level)}] » ${chalk.cyan(msg)}`);
+        console.log(`[${chalkedDate}] [${chalk.greenBright(service)}] [${chalk.cyan(level)}] » ${id ? "(" + id + ") " : ""}${chalk.cyan(msg)}`);
         break;
       case "TRACE":
-        console.log(`[${chalkedDate}] [${chalk.greenBright(service)}] [${chalk.gray(level)}] » ${chalk.gray(msg)}`);
+        console.log(`[${chalkedDate}] [${chalk.greenBright(service)}] [${chalk.gray(level)}] » ${id ? "(" + id + ") " : ""}${chalk.gray(msg)}`);
         break;
     }
   }
@@ -109,8 +109,8 @@ export class Logger {
    * @param service Service that emitted the log call
    * @param msg Message to log
    */
-  public critical(service: string, msg: string): void {
-    this.log(service, msg, "CRITICAL");
+  public critical(service: string, msg: string, id?:string): void {
+    this.log(service, msg, "CRITICAL", id);
   }
   /**
    * @public Logs a message to the console using the runtime's default console implementation with the **ERROR** Level
@@ -118,8 +118,8 @@ export class Logger {
    * @param service Service that emitted the log call
    * @param msg Message to log
    */
-  public error(service: string, msg: string): void {
-    this.log(service, msg, "ERROR");
+  public error(service: string, msg: string, id?:string): void {
+    this.log(service, msg, "ERROR", id);
   }
   /**
    * @public Logs a message to the console using the runtime's default console implementation with the **WARNING** Level
@@ -127,8 +127,8 @@ export class Logger {
    * @param service Service that emitted the log call
    * @param msg Message to log
    */
-  public warning(service: string, msg: string): void {
-    this.log(service, msg, "WARNING");
+  public warning(service: string, msg: string, id?:string): void {
+    this.log(service, msg, "WARNING", id);
   }
   /**
    * @public Logs a message to the console using the runtime's default console implementation with the **INFO** Level
@@ -136,8 +136,8 @@ export class Logger {
    * @param service Service that emitted the log call
    * @param msg Message to log
    */
-  public info(service: string, msg: string): void {
-    this.log(service, msg, "INFO");
+  public info(service: string, msg: string, id?:string): void {
+    this.log(service, msg, "INFO", id);
   }
   /**
    * @public Logs a message to the console using the runtime's default console implementation with the **DEBUG** Level
@@ -145,8 +145,8 @@ export class Logger {
    * @param service Service that emitted the log call
    * @param msg Message to log
    */
-  public debug(service: string, msg: string): void {
-    this.log(service, msg, "DEBUG");
+  public debug(service: string, msg: string, id?:string): void {
+    this.log(service, msg, "DEBUG", id);
   }
   /**
    * @public Logs a message to the console using the runtime's default console implementation with the **TRACE** Level
@@ -154,7 +154,7 @@ export class Logger {
    * @param service Service that emitted the log call
    * @param msg Message to log
    */
-  public trace(service: string, msg: string): void {
-    this.log(service, msg, "TRACE");
+  public trace(service: string, msg: string, id?:string): void {
+    this.log(service, msg, "TRACE", id);
   }
 }
