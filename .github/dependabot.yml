@@ -3,6 +3,8 @@ updates:
   - package-ecosystem: "npm"
     directory: "/packages/logger"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
+    cooldown:
+      default-days: 7
     commit-message:
       prefix: "@logger"
