@@ -5,9 +5,10 @@
 
 All Packages that in this repository are published to the [`JSR`](https://jsr.io) registry and can be added to a project like this:
 
-[`npm`](https://npmjs.com/) » `npx jsr add @pixelic/{PACKAGE_NAME}`<br/>
-[`pnpm`](https://pnpm.io/) » `pnpm dlx jsr add @pixelic/{PACKAGE_NAME}`<br/>
-[`bun`](https://bun.sh/) » `bunx jsr add @pixelic/{PACKAGE_NAME}`
+[`npm`](https://npmjs.com/) » `npx jsr add @pixelic/{PACKAGE_NAME}` (Using npm for JSR dependencies is not recommended)<br/>
+[`pnpm`](https://pnpm.io/) » `pnpm i jsr:@pixelic/{PACKAGE_NAME}`<br/>
+[`bun`](https://bun.sh/) » `bunx jsr add @pixelic/{PACKAGE_NAME}`<br/>
+[`deno`](https://deno.com/) `deno add jsr:@pixelic/{PACKAGE_NAME}`
 
 # List of Packages
 
