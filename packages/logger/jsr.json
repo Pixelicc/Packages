@@ -1,6 +1,11 @@
 {
   "name": "@pixelic/logger",
   "license": "MIT",
-  "version": "0.1.0",
-  "exports": "./src/index.ts"
+  "version": "0.2.0",
+  "exports": "./src/index.ts",
+  "publish" : {
+    "include": [
+      "./src/index.ts"
+    ]
+  }
 }
