@@ -36,13 +36,20 @@ export type LogLevel = keyof typeof LogLevels;
  *
  * @type
  */
-export type LoggerConfig = {
+export type LoggerConfig<T extends string = string> = {
   /**
    * Minimum Log Level that should be logged to the console using the runtime's default console implementation
    *
    * @default "INFO"
    */
   minLevel?: LogLevel;
+  /**
+   * Services that should be logged to the console using the runtime's default console implementation
+   *
+   * @default undefined
+   * @example ["ServiceA", "ServiceB"]
+   */
+  services?: T[];
 };
 
 /**
@@ -54,14 +61,16 @@ export type LoggerConfig = {
  *
  * @returns Logger Instance
  */
-export class Logger {
-  private minLevel: LogLevel = "INFO";
+export class Logger<T extends string = string> {
+  public minLevel: LogLevel = "INFO";
+  public services: T[];
 
   /**
    * @constructor Creates a Logger Instance
    */
-  constructor(config?: LoggerConfig) {
+  constructor(config?: LoggerConfig<T>) {
     if (config?.minLevel) this.minLevel = config.minLevel;
+    this.services = (config?.services ?? []) as T[];
   }
 
   /**
@@ -80,7 +89,12 @@ export class Logger {
    * @param msg Message to log
    * @param level Log Level
    */
-  public log(service: string, msg: string, level: LogLevel, id?: string): void {
+  public log(
+    service: T | (string & {}),
+    msg: string,
+    level: LogLevel,
+    id?: string,
+  ): void {
     if (!this.satisfiesMinLevel(level)) return;
 
     const dateStr = `${String(new Date().getHours()).padStart(2, "0")}:${String(new Date().getMinutes()).padStart(2, "0")}:${String(new Date().getSeconds()).padStart(2, "0")}`;
@@ -127,7 +141,7 @@ export class Logger {
    * @param service Service that emitted the log call
    * @param msg Message to log
    */
-  public critical(service: string, msg: string, id?: string): void {
+  public critical(service: T | (string & {}), msg: string, id?: string): void {
     this.log(service, msg, "CRITICAL", id);
   }
   /**
@@ -136,7 +150,7 @@ export class Logger {
    * @param service Service that emitted the log call
    * @param msg Message to log
    */
-  public error(service: string, msg: string, id?: string): void {
+  public error(service: T | (string & {}), msg: string, id?: string): void {
     this.log(service, msg, "ERROR", id);
   }
   /**
@@ -145,7 +159,7 @@ export class Logger {
    * @param service Service that emitted the log call
    * @param msg Message to log
    */
-  public warning(service: string, msg: string, id?: string): void {
+  public warning(service: T | (string & {}), msg: string, id?: string): void {
     this.log(service, msg, "WARNING", id);
   }
   /**
@@ -154,7 +168,7 @@ export class Logger {
    * @param service Service that emitted the log call
    * @param msg Message to log
    */
-  public info(service: string, msg: string, id?: string): void {
+  public info(service: T | (string & {}), msg: string, id?: string): void {
     this.log(service, msg, "INFO", id);
   }
   /**
@@ -163,7 +177,7 @@ export class Logger {
    * @param service Service that emitted the log call
    * @param msg Message to log
    */
-  public debug(service: string, msg: string, id?: string): void {
+  public debug(service: T | (string & {}), msg: string, id?: string): void {
     this.log(service, msg, "DEBUG", id);
   }
   /**
@@ -172,7 +186,7 @@ export class Logger {
    * @param service Service that emitted the log call
    * @param msg Message to log
    */
-  public trace(service: string, msg: string, id?: string): void {
+  public trace(service: T | (string & {}), msg: string, id?: string): void {
     this.log(service, msg, "TRACE", id);
   }
 }

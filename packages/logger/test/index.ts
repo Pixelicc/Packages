@@ -1,34 +1,37 @@
 import { Logger } from "../src/index.js";
 
-const logger = new Logger({ minLevel: "TRACE" });
+const logger = new Logger({
+  minLevel: "TRACE",
+  services: ["ServiceA", "ServiceB"],
+});
 
 logger.trace(
-  "Service",
+  "ServiceA",
   "This message is a simple test message to test the @pixelic/logger library.",
   "48696921",
 );
 logger.debug(
-  "Service",
+  "ServiceA",
   "This message is a simple test message to test the @pixelic/logger library.",
   "48696921",
 );
 logger.info(
-  "Service",
+  "ServiceA",
   "This message is a simple test message to test the @pixelic/logger library.",
   "48696921",
 );
 logger.warning(
-  "Service",
+  "ServiceB",
   "This message is a simple test message to test the @pixelic/logger library.",
   "48696921",
 );
 logger.error(
-  "Service",
+  "ServiceB",
   "This message is a simple test message to test the @pixelic/logger library.",
   "48696921",
 );
 logger.critical(
-  "Service",
+  "ServiceB",
   "This message is a simple test message to test the @pixelic/logger library.",
   "48696921",
 );
