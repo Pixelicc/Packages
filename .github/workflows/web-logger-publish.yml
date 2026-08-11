@@ -1,0 +1,28 @@
+name: "[Web-Logger] Publish to JSR"
+
+defaults:
+  run:
+    working-directory: ./packages/web-logger
+
+on:
+  push:
+    paths:
+      - "packages/web-logger/**"
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v6
+      - name: Use PNPM Package Manager
+        uses: pnpm/action-setup@v6
+        with:
+          version: 11
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm dlx jsr publish

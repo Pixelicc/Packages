@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        font-family: monospace;
+        background: #1d1d1d;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Open DevTools to see Console Output.</p>
+    <script type="module">
+      import { Logger } from "../dist/src/index.js";
+
+      const logger = new Logger({
+        minLevel: "TRACE",
+        services: ["ServiceA", "ServiceB"],
+      });
+
+      logger.trace("ServiceA", "This message is a simple test message to test the @pixelic/web-logger library.", "48696921");
+      logger.debug("ServiceA", "This message is a simple test message to test the @pixelic/web-logger library.", "48696921");
+      logger.info("ServiceA", "This message is a simple test message to test the @pixelic/web-logger library.", "48696921");
+      logger.warning("ServiceB", "This message is a simple test message to test the @pixelic/web-logger library.", "48696921");
+      logger.error("ServiceB", "This message is a simple test message to test the @pixelic/web-logger library.", "48696921");
+      logger.critical("ServiceB", "This message is a simple test message to test the @pixelic/web-logger library.", "48696921");
+    </script>
+  </body>
+</html>
